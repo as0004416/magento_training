@@ -1,0 +1,11 @@
+<?php
+/**  @var Amasty\UserName\Block\Form $block */
+?>
+<form action="">
+    <label>Text: </label>
+    <input type="text" name="sku">
+    <label>Number: </label>
+    <input type="number" name="qty">
+    <div><?php echo $block->getChildHtml(); ?></div>
+    <input type="submit" value="Submit">
+</form>

@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page layout="3columns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="Amasty_UserName::css/style.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <referenceContainer name="content">
+            <container name="amasty_username.main">
+                <block name="amasty_username.index.index" class="Magento\Framework\View\Element\Text">
+                    <action method="setText">
+                        <argument name="text" xsi:type="string">Это мой первый Action.</argument>
+                    </action>
+                </block>
+                <block name="amasty_username.hello" class="Amasty\UserName\Block\Hello"
+                       template="Amasty_UserName::hello.phtml"/>
+                <block name="amasty_username.form" class="Amasty\UserName\Block\Form"
+                       template="Amasty_UserName::form.phtml">
+                    <block name="amasty_username.text" class="Amasty\UserName\Block\Additional"
+                           template="Amasty_UserName::additional.phtml"/>
+                </block>
+            </container>
+        </referenceContainer>
+    </body>
+</page>
